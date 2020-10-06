@@ -4,12 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
 	    Task1 task = new Task1();
-	    task.get_sum_of_digits(6666);
-	    task.reverse_string("my string");
-		System.out.println(task.checkPalidrome(11));
-		task.strCounter("1231sssaa  aaa}}}}");
-		task.strCounterV2("1231sssaa  aaa}}}}");
+	  //  task.get_sum_of_digits();
+	  //  task.reverse_string("my string");
+
+		//task.strCounterV2("1231sssaa  aaa}}}}");
+		task.checkPalidrome(121);
 		int arr[] = {11,2,3,7,0,1};
+
+
+		task.strCounter("aaa 123 }}'*");
+		task.strCounterV2("aaa 123 }}'*");
 
 		arr = task.sort(arr);
 

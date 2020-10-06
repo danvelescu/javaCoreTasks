@@ -2,10 +2,18 @@ package com.company;
 
 import javax.swing.text.html.HTMLDocument;
 import java.awt.font.NumericShaper;
+import java.time.Period;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
 
 public class Task1 {
-    public int get_sum_of_digits(int number){
+
+    public int get_sum_of_digits(){
+        System.out.println("Hey , give me a number please ");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
         if (number<=0 || number>=1000) return 0;
         int sum=0;
     while(number>0) {
@@ -31,7 +39,6 @@ public class Task1 {
 
     public boolean checkPalidrome(Integer number){
            String strNum = number.toString();
-           if(strNum.length()%2!=0)return false;
            char[] chars = strNum.toCharArray();
            for(int i = 0,j = chars.length-1;i<=chars.length/2;i++){
                if(chars[i]!=chars[j])return false;
@@ -96,9 +103,9 @@ public class Task1 {
     }
 
     public void sortMyObj(Object[] objArr){
-        Person[] persons = new Person[objArr.length];
+        List<Person> prsons = new ArrayList<>();
         int summ = 0;
-        int i=0;
+
         String str ="";
         for(Object obj:objArr){
             if(obj.getClass() == Integer.class){
@@ -108,14 +115,13 @@ public class Task1 {
                 str+=(String)obj;
             }else
             {
-                persons[i] = (Person) obj;
-                i++;
+               prsons.add((Person) obj);
             }
         }
-
         System.out.println(summ);
         System.out.println(str);
-        for (Person p:persons) System.out.println(p);
+        for (Person p:prsons)
+            System.out.println(p);
     }
 
 }
