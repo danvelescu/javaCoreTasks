@@ -47,20 +47,6 @@ public class Task1 {
         return true;
     }
 
-    public void strCounter(String str){
-        String str1 = str.replaceAll("[0-9]","");
-        int len = str.length()-str1.length();
-        System.out.println("Numbers = " + len);
-        str1 = str.replaceAll(" ","");
-        len = str.length() - str1.length();
-        System.out.println("Spaces = "+len);
-        str1 = str.replaceAll("[A-z]","");
-        len = str.length() - str1.length();
-        System.out.println("Letters = " + len);
-        str1 = str.replaceAll("[^[\\s][A-z][0-9]]","");
-        len = str.length() - str1.length();
-        System.out.println("Other = "+len);
-    }
     public void strCounterV2(String str){
         int numbers = 0;
         int letters = 0;
@@ -121,7 +107,7 @@ public class Task1 {
         System.out.println(summ);
         System.out.println(str);
         for (Person p:prsons)
-            System.out.println(p);
+            System.out.println(p.getName());
     }
 
 }
