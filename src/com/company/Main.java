@@ -12,7 +12,6 @@ public class Main {
 		int arr[] = {11,2,3,7,0,1};
 
 
-		task.strCounter("aaa 123 }}'*");
 		task.strCounterV2("aaa 123 }}'*");
 
 		arr = task.sort(arr);
